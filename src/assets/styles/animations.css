@@ -1,0 +1,18 @@
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(1000%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes popFromNothing {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=animations.css.map */
