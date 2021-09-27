@@ -2,17 +2,25 @@
   0% {
     transform: translateX(1000%);
   }
-  100% {
+  50%{
+    transform: translateX(-10%);
+  }
+  60% {
     transform: translateX(0);
   }
 }
 
 @keyframes popFromNothing {
-  0% {
+  from{
     transform: scale(0);
   }
-
-  100% {
+  40%{
+    transform: scale(1.1);
+  }
+  50%{
+    transform: scale(1)
+  }
+  to{
     transform: scale(1);
   }
 }

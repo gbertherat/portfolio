@@ -1,17 +1,23 @@
+$FIRST-COLOR: #252525;
+$SECOND-COLOR: rgb(120,150,255);
+$THIRD-COLOR: #d5e9ff;
+
 body{
     margin:0;
 }
 
+.v-application{
+    font-family: Lato, sans-serif !important;
+}
+
 #app{
-    background-color: rgb(38,38,38);
+    background-color: $FIRST-COLOR;
 }
 
 .container{
     width:80%;
     display: flex;
     justify-content: center;
-    border:1px solid rgb(20,20,20);
-    background-color: rgb(50, 50, 50);
 }
 
 .main{
@@ -22,49 +28,30 @@ body{
     align-items: center;
 }
 
-.header{
-    width:100%;
-    padding:20px 0;
-    text-align: center;
-    transition: all 1s ease-out;
-    background: center/70% url("../images/keyboard.png");
-
-    div{
-        padding:15px 0;
-        background-color: rgba(0,0,0,0.75);
-    }
-    h1{
-        color: deepskyblue;
-    }
-    h2 {
-        color: white;
-    }
-}
-
-.header:hover{
-    padding:40px 0;
-}
-
 .presentation{
     display:flex;
-    padding:25px 0;
+    margin-top:1%;
     align-items: center;
+    flex-direction: column;
     .picture{
-        width:250px;
+        width:240px;
         height:auto;
         border-radius: 50%;
         transition: all 0.5s ease-in;
         animation: 1s popFromNothing;
-        border:1px solid rgb(20,20,20);
+        border:1px solid $THIRD-COLOR;
     }
     .picture:hover{
         width:300px;
     }
     .texts{
         color:white;
-        font-size:26px;
-        margin-left:25px;
+        font-size:22px;
         text-align: center;
+        margin-top:2%;
+        padding:1% 1%;
+        border-radius: 30px;
+        background-color: $SECOND-COLOR;
     }
     .text1{
         animation: 1.8s slideInFromRight;
@@ -81,6 +68,7 @@ body{
     padding:10px;
     text-align:center;
     position:absolute;
-    background-color: rgba(0,0,0,0.4);
+    border-radius: 10px;
+    background-color: $SECOND-COLOR;
 }
 
