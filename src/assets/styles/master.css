@@ -1,26 +1,28 @@
-body {
-  margin: 0;
+* {
+  color: white !important;
+  font-family: Lato, sans-serif !important;
 }
 
-.v-application {
-  font-family: Lato, sans-serif !important;
+body {
+  margin: 0;
 }
 
 #app {
   background-color: #252525;
 }
 
-.container {
-  width: 80%;
+.container, .main, .presentation, .portfolioItem, .portfolioItemContainer, .backButton, .CV {
   display: flex;
   justify-content: center;
 }
 
-.main {
-  display: flex;
-  gap: 50px;
+.container {
+  height: 100%;
   flex-direction: column;
-  justify-content: center;
+}
+
+.main {
+  flex-direction: column;
   align-items: center;
 }
 
@@ -42,12 +44,11 @@ body {
   width: 300px;
 }
 .presentation .texts {
-  color: white;
   font-size: 22px;
   text-align: center;
   margin-top: 2%;
   padding: 1% 1%;
-  border-radius: 30px;
+  border-radius: 20px;
   background-color: #7896ff;
 }
 .presentation .text1 {
@@ -57,10 +58,49 @@ body {
   animation: 2s slideInFromRight;
 }
 
+.portfolioItemContainer {
+  margin-top: 5%;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.portfolioItem {
+  width: 150px;
+  height: 150px;
+  margin: 0 50px;
+  border-radius: 10%;
+  align-items: center;
+  transition: 0.2s ease-in all;
+  background-color: #7896ff;
+}
+
+.portfolioItem:hover {
+  width: 200px;
+  height: 200px;
+}
+
+.backButton {
+  position: absolute;
+  left: 1%;
+  top: 1%;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  align-items: center;
+  animation: 1s popFromNothing;
+  background-color: #7896ff;
+}
+
+.CV {
+  width: 80%;
+  align-items: center;
+  animation: 1s slideInFromRight;
+  background-color: #7896ff;
+}
+
 .footer {
   bottom: 0;
   width: 100%;
-  color: white;
   padding: 10px;
   text-align: center;
   position: absolute;

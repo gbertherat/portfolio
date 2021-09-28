@@ -2,16 +2,23 @@
   <v-app>
     <v-main>
       <div class="main">
-        <div class="container">
+        <div class="container" v-if="$router.currentRoute.path === '/'">
           <Presentation />
+          <div class="portfolioItemContainer">
+            <a class="portfolioItem"
+               v-for="item in portfolioItems"
+               :key="item.title"
+               v-bind:style="{animation: ((portfolioItems.indexOf(item)+1)/portfolioItems.length)*2 + 's popFromNothing'}"
+               @click="$router.push(item.link)">{{item.title}}</a>
+          </div>
         </div>
-        <div class="container">
-
+        <div v-if="this.$router.currentRoute.path !== '/'">
+          <a class="backButton" @click="goBack">Back</a>
         </div>
+        <router-view class="test"/>
         <Footer />
       </div>
     </v-main>
-
   </v-app>
 </template>
 
@@ -25,7 +32,21 @@ export default {
   name: 'App',
   components:{
     Presentation,
-    Footer
+    Footer,
+  },
+  data: function(){
+    return{
+      portfolioItems:[
+        {title:"CV",link:"/CV"},
+        {title:"CV",link:"/CV"},
+        {title:"CV",link:"/CV"},
+      ],
+    }
+  },
+  methods: {
+    goBack() {
+      this.$router.push('/');
+    }
   }
 };
 </script>
